@@ -1,4 +1,4 @@
-const staticCacheName = 'BrightsCurrencyConverter-static-v4';
+const staticCacheName = 'Converter-static-v4';
 
 // files to cache
 const filesToCache = [
@@ -29,7 +29,7 @@ self.addEventListener('install', event => {
         return Promise.all(
           cacheNames.filter(cacheName => {
              // console.log(cacheName);
-            return cacheName.startsWith('BrightsCurrencyConverter-') && staticCacheName !== cacheName;
+            return cacheName.startsWith('Converter-') && staticCacheName !== cacheName;
           }).map( cacheName => {
             if(staticCacheName !== cacheName){
                 return caches.delete(cacheName);
